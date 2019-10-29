@@ -1,4 +1,8 @@
-export default function reducer (state, action) {
+let initState = {
+  counter: 0
+}
+
+export default function counterReducer (state = initState, action) {
   switch (action.type) {
     case 'INCREMENT': 
       return {
