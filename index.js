@@ -5,17 +5,10 @@ const reducer = combineReducer({
   counter: counterReducer,
   info: infoReducer
 })
-let initState = {
-  counter: {
-    count: 0
-  },
-  info: {
-    name: ''
-  }
-}
 
-let store = createStore(reducer, initState)
 
+let store = createStore(reducer)
+console.log(store.getState())
 // 订阅
 store.subscribe(() => {
   let state = store.getState()

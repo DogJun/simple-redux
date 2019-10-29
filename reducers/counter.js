@@ -1,5 +1,5 @@
 let initState = {
-  counter: 0
+  count: 0
 }
 
 export default function counterReducer (state = initState, action) {

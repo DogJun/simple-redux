@@ -1,5 +1,5 @@
-export default function createStore (reducer, initStore) {
-  let state = initStore
+export default function createStore (reducer, initState) {
+  let state = initState
   let listeners = []
   function subscribe (listener) {
     listeners.push(listener)
@@ -15,6 +15,9 @@ export default function createStore (reducer, initStore) {
   function getState () {
     return state
   }
+  dispatch({
+    type: Symbol()
+  })
   return {
     getState,
     dispatch,
