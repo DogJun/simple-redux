@@ -1,23 +1,21 @@
 import {createStore} from './simple-redux/index.js'
-
+import reducer from './reducer.js'
 let initState = {
   count: 0,
   name: '',
 }
 
-let store = createStore(initState)
+let store = createStore(reducer, initState)
 
 // 订阅
 store.subscribe(() => {
   let state = store.getState()
-  console.log(state.counter.count)
+  console.log(state.count)
 })
-// dispatch
-store.changeState(
-  {
-    ...store.getState(),
-    counter: {
-      count: 2
-    }
-  }
-)
+// dispatch 通过派发任务 执行更新
+store.dispatch({
+  type: 'INCREMENT'
+})
+store.dispatch({
+  type: 'DECRMENT'
+})
