@@ -1,6 +1,9 @@
 import createStore from './createStore.js'
 import combineReducer from './combineReducer.js'
+import applyMiddleware from './applyMiddleware.js'
+
 export {
   createStore,
-  combineReducer
+  combineReducer,
+  applyMiddleware
 }
