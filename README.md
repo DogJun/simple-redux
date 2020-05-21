@@ -1,1 +1,1 @@
-v6 版本 完成中间件的扩展
+v7 版本 实现bindActionCreator功能
